@@ -139,7 +139,7 @@ function calcular() {
 let total = CantComp.value * Precio.value;
 
 Total.value = total;
-if(Stock.value<CantComp.value){
+if(parseInt (CantComp.value)>parseInt(Stock.value)){
 
   alert("el stock es menor a la cantidad que deseaa vender")
   document.getElementById("vender").disabled=true;
