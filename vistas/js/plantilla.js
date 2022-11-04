@@ -139,12 +139,20 @@ function calcular() {
 let total = CantComp.value * Precio.value;
 
 Total.value = total;
+if(Stock.value<CantComp.value){
 
+  alert("el stock es menor a la cantidad que deseaa vender")
+  document.getElementById("vender").disabled=true;
+  document.getElementById("CantComp").value="",
+  document.getElementById("Total").value=""
+}else{
+  document.getElementById("vender").disabled=false;
+}
   
 }
 
 function Vender(){
-
+ 
   let formdata = new FormData(document.getElementById("venderProducto"));
 
 
